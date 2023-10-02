@@ -1,2 +1,2 @@
 #!/bin/bssh
-grep "bin" /etc/passwd | wc -l
+grep "bin" /etc/passwd | wC -l

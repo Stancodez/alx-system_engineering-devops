@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+pid_file="/var/run/myscript.pid"
+
+# Function to handle cleanup
+cleanup() {
+    echo "Cleaning up..."
+    rm -f "$pid_file"
+    exit 0
+}
+
+# Trap signals and call cleanup function
+trap 'cleanup' SIGQUIT SIGTERM
+
+# Trap signals and provide custom messages
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+
+# Get the script's PID and store it in the pid_file
+echo $$ > "$pid_file"
+
+# Display message indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
+

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This sript allows you to easily get the PID of your bash process
+
+./1-list_your_processes | grep "bash"

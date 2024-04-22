@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# SSH Config File
+
+Host *
+	Hostname 100.25.222.190
+	User ubuntu
+	SendEnv LANG LC_*
+	HashKnownHosts yes
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials no
+	PasswordAuthentication no
+	IdentityFile ~/.ssh/school
+

@@ -41,7 +41,7 @@ frontend stancodez-frontend
         default_backend stancodez-backend
 
 frontend stancodez-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/stancodez.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.stancodez.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend stancodez-backend
 

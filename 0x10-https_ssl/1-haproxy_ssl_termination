@@ -41,11 +41,11 @@ frontend stancodez-frontend
         default_backend stancodez-backend
 
 frontend stancodez-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/stancodez.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.stancodez.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend stancodez-backend
 
 backend stancodez-backend
         balance roundrobin
-        server 530524-web-01 100.25.222.190:80 check
-        server 530524-web-02 34.224.62.238:80 check
+        server web-01 100.25.222.190:80 check
+    	server web-02 34.224.62.238:80 check

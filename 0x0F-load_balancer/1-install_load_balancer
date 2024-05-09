@@ -40,8 +40,8 @@ frontend stancodez_frontend
 
 backend stancodez_backend
     balance roundrobin
-    server 530524-web-01 100.25.222.190 check
-    server 530524-web-02 34.224.62.238 check
+    server 530524-web-01 100.25.222.190:80 check
+    server 530524-web-02 34.224.62.238:80 check
 "
 
 # shellcheck disable=SC2154
